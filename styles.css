@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Itim&family=Raleway&family=Roboto+Mono:wght@700&display=swap');
+
+/* Fonts:
+-> Aboreto (Horror)
+-> Raleway (for gameOver)
+-> Roboto Mono (type)
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: rgba(53, 53, 53, 0.466);
+    margin-bottom: 80px;
+    padding: 20px;
+    text-align: center;
+
+    font-size: 23px;
+    font-family: 'Aboreto';
+    color:rgb(204, 19, 19);
+}
+
+.game {
+    border: 1px solid brown;
+    border-radius: 5px;
+    text-align: center;
+
+    margin: 0 40px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.game img {
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-self: center;
+}
+
+#header-gamer {
+    padding: 16px;
+}
+
+#h1-game {
+    font-size: 23px;
+}
+
+/* GAME */
+#back-index {
+    text-decoration: none;
+}
+
+#tutorial {
+    height: auto;
+    width: 50%;
+    padding: 10px;
+
+    border: 1px solid brown;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#gameplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#gameplay #dice-btn {
+    width: 25%;
+    height: 36px;
+    margin-bottom: 20px;
+
+    background-color: brown;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Roboto Mono', sans-serif;
+
+    transition: 0.5s;
+}
+
+#dice-btn:hover {
+    cursor: pointer;
+}
+
+#attempt label {
+    font-size: 16px;
+}
+#gameplay #attempt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#gameplay #attempt #attempt-input {
+    width: 100px;
+    height: 35px;
+    margin: 10px auto;
+
+    background-color: rgba(223, 223, 223, 0.096);
+    border: none;
+    border-bottom: 2px solid rgb(206, 107, 107);
+    border-left: 2px solid rgb(206, 107, 107);
+    border-radius: 10px;
+
+    font-family: 'Roboto Mono', sans-serif;
+    color: white;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+#gameplay #attempt #send-answer {
+    width: 150px;
+    height: 40px;
+    margin: 10px auto;
+    
+    border-radius: 10px;
+}
+
+#send-answer:hover {
+    cursor: pointer;
+    background-color: rgb(255, 203, 203);
+}
+
+#count {
+    font-size: 20px;
+    font-family: 'Raleway';
+    margin-left: 8px;
+    color: coral;
+}
+
+.win-die {
+    margin-top: 30px;
+}
+
+/* INDEX */
+.game h3 {
+    font-family: 'Aboreto';
+    margin: 8px;
+    font-size: 24px;
+}
+
+.game label {
+    font-size: 18px;
+}
+
+.game #name-user {
+    width: 40%;
+    height: 35px;
+    margin: 10px auto;
+
+    background-color: rgba(223, 223, 223, 0.096);
+    border: none;
+    border-bottom: 2px solid rgb(206, 107, 107);
+    border-left: 2px solid rgb(206, 107, 107);
+    border-radius: 10px;
+
+    font-family: 'Roboto Mono', sans-serif;
+    color: white;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.game #submit {
+    width: 10%;
+    margin: 10px auto;
+    height: 35px;
+
+    transition: 0.5s;
+}
+
+#submit:enabled {
+    cursor: pointer;
+}
+
+/* Hover quando está habilitado */
+#submit:not(:disabled):hover {
+    color: rgb(146, 11, 11);
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+    background-color: rgba(223, 223, 223, 0.096);
+}
+
+#footer a {
+    text-decoration: none;
+    color: brown;
+}
+
+#footer a:active {
+    color: red;
+}

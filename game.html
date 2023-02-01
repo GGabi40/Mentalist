@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentalistic Game</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+        <header id="header-gamer">
+            <a href="./index.html" id="back-index">
+            <h1 id="h1-game">Welcome to my Game.</h1>
+            </a>
+        </header>
+
+        <section id="tutorial">
+            <p>You must hit the number in the least amount of attempts possible (between 1 - 100).</p>
+        </section>
+
+        <section id="gameplay">
+            <button id="dice-btn" title="Click for generate a random number">Generate Number</button>
+            <!-- genera num -->
+            <section id="attempt">
+                <!-- escribe num -->
+                <label for="attempt-input">What number do you like to try:</label>
+                <input type="number" name="attempt-input" id="attempt-input">
+                <button id="send-answer" disabled>Accept</button>
+
+                <section id="attempts-count">
+                    <p>Attempts: <span id="count"></span></p>
+                </section>
+
+                <section class="win-die">
+                </section>
+            </section>
+        </section>
+
+        <footer id="footer">
+            <p>Desenvolved by <a href="https://instagram.com/ggabi40" target="_blank">GGabi40</a>.</p>
+        </footer>
+    </main>
+
+    <script src="./main-game.js"></script>
+</body>
+</html>
