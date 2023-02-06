@@ -25,8 +25,6 @@ dice.addEventListener('click', function() {
 });
 
 send.addEventListener('click', function() {
-    // Envía resp y suma intentos
-
     if(attemptInput.value === '') {
         return
     } else {

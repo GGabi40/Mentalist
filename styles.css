@@ -146,6 +146,8 @@ header {
 
 .win-die {
     margin-top: 30px;
+    font-family: 'Aboreto';
+    font-size: 16px;
 }
 
 /* INDEX */
@@ -198,6 +200,8 @@ header {
     bottom: 0;
     width: 100%;
     text-align: center;
+    font-family: 'Roboto Mono';
+    font-size: 14px;
 
     background-color: rgba(223, 223, 223, 0.096);
 }
