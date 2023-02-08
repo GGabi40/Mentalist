@@ -1,9 +1,9 @@
-<h1>Points Counter</h1>
+<h1>Mentalist</h1>
 
 <p>This project was maded for Alura's Challenge, 5 days coding JavaScript.</p>
 
 <br>
-<h2>Points Counter+</h2>
+<h2>Mentalist</h2>
 <img src="./assets/preview.png" alt="Preview" style="border: 3px solid brown;">
 
 <br>
