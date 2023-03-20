@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentalistic Game</title>
+    <title>Mentalist | Game</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="website icon" href="./assets/dice.png">
 </head>
 <body>
     <main>
@@ -16,29 +17,45 @@
         </header>
 
         <section id="tutorial">
-            <p>You must hit the number in the least amount of attempts possible (between 1 - 100).</p>
+            <p>You must hit the number in the least amount of attempts possible (between 0 - 100).</p>
         </section>
 
         <section id="gameplay">
             <button id="dice-btn" title="Click for generate a random number">Generate Number</button>
             <!-- genera num -->
+            
             <section id="attempt">
-                <!-- escribe num -->
                 <label for="attempt-input">What number do you like to try:</label>
-                <input type="number" name="attempt-input" id="attempt-input">
+                <input type="number" name="attempt-input" min="0" max="100" id="attempt-input" title="You must generate a random number first." disabled>
                 <button id="send-answer" disabled>Accept</button>
 
                 <section id="attempts-count">
                     <p>Attempts: <span id="count"></span></p>
                 </section>
 
-                <section class="win-die">
-                </section>
+                <section class="win-die"></section>
             </section>
+
         </section>
 
+        <section class="credits">
+            <p>Desenvolved by <a href="https://instagram.com/ggabi40" target="_blank" id="gabi-instagram">GGabi40</a> | 2023.</p>
+        <br>
+        <p>Collaborators:
+            <ul id="collaborators">
+                <li><a href="https://instagram.com/luizgui.dev" target="_blank" id="gabi-instagram">Luiz Guilherme</a></li>
+            </ul>
+        </p>
+    </section>
+
         <footer id="footer">
-            <p>Desenvolved by <a href="https://instagram.com/ggabi40" target="_blank">GGabi40</a>.</p>
+            <p>Desenvolved by <a href="https://instagram.com/ggabi40" target="_blank" id="gabi-instagram">GGabi40</a>.</p>
+            <br>
+            <p>Collaborators:
+                <ul id="collaborators">
+                    <li><a href="https://instagram.com/luizgui.dev" target="_blank" id="gabi-instagram">Luiz Guilherme</a></li>
+                </ul>
+            </p>
         </footer>
     </main>
 

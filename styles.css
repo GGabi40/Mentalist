@@ -9,16 +9,18 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html{
     height: 100%;
+    font-size: 62.5%;
 }
 
 body {
     background-color: black;
     color: white;
-    box-sizing: border-box;
 
     min-height: 100%;
     width: 100vw;
@@ -30,7 +32,7 @@ header {
     padding: 20px;
     text-align: center;
 
-    font-size: 23px;
+    font-size: 2.3em;
     font-family: 'Aboreto';
     color:rgb(204, 19, 19);
 }
@@ -40,7 +42,8 @@ header {
     border-radius: 5px;
     text-align: center;
 
-    margin: 0 40px;
+    margin: 0 auto;
+    width: 40%;
     padding: 8px;
     display: flex;
     flex-direction: column;
@@ -51,6 +54,37 @@ header {
     width: 90px;
     display: flex;
     align-self: center;
+}
+
+.gamemode .game.mode {
+    margin-top: 10px;
+}
+
+#gamemode {
+    min-width: 35%;
+    height: 30px;
+    margin: 8px auto;
+    padding: 4px;
+    margin-bottom: 10px;
+
+    border: 2px solid rgb(206, 107, 107);
+    border-radius: 10px;
+
+    background-color: rgba(223, 223, 223, 0.096);
+    color: brown;
+}
+
+#limit {
+    max-width: 30%;
+    height: 30px;
+    margin: 2px 10px;
+    padding: 4px;
+
+    border: 2px solid rgb(206, 107, 107);
+    border-radius: 10px;
+
+    background-color: rgba(223, 223, 223, 0.096);
+    color: brown;
 }
 
 #header-gamer {
@@ -66,10 +100,20 @@ header {
     text-decoration: none;
 }
 
+.win-die {
+    text-align: center;
+}
+
+.win-die #back-index {
+    font-family: 'Raleway', sans;
+}
+
 #tutorial {
     height: auto;
     width: 50%;
     padding: 10px;
+
+    font-size: 1.6em;
 
     border: 1px solid brown;
     text-align: center;
@@ -84,15 +128,14 @@ header {
 }
 
 #gameplay #dice-btn {
-    width: 25%;
-    height: 36px;
+    padding: 16px;
     margin-bottom: 20px;
 
     background-color: brown;
     border: none;
     border-radius: 10px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1.6em;
     font-family: 'Roboto Mono', sans-serif;
 
     transition: 0.5s;
@@ -103,7 +146,7 @@ header {
 }
 
 #attempt label {
-    font-size: 16px;
+    font-size: 1.6em;
 }
 #gameplay #attempt {
     display: flex;
@@ -129,8 +172,7 @@ header {
 }
 
 #gameplay #attempt #send-answer {
-    width: 150px;
-    height: 40px;
+    padding: 15px;
     margin: 10px auto;
     
     border-radius: 10px;
@@ -141,8 +183,23 @@ header {
     background-color: rgb(255, 203, 203);
 }
 
+.win-die {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.win-die a {
+    margin-bottom: 2rem;
+}
+
+#attempts-count p {
+    font-size: 1.6em;
+}
+
 #count {
-    font-size: 20px;
+    font-size: 2.0em;
     font-family: 'Raleway';
     margin-left: 8px;
     color: coral;
@@ -155,6 +212,12 @@ header {
 }
 
 /* INDEX */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .game h3 {
     font-family: 'Aboreto';
     margin: 8px;
@@ -166,7 +229,7 @@ header {
 }
 
 .game #name-user {
-    width: 40%;
+    width: 30%;
     height: 35px;
     margin: 10px auto;
 
@@ -182,8 +245,45 @@ header {
     padding-left: 15px;
 }
 
+.credits {
+    visibility: hidden;
+    margin-top: 10px;
+
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        margin-bottom: 60px;
+    }
+
+    .game {
+        width: 50%;
+    }
+
+    .game #name-user {
+        width: 35%;
+    }
+
+    #gamemode {
+        width: 45%;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .credits{
+        visibility: visible;
+    }
+
+    #footer {
+        display: none;
+}
+}
+
 .game #submit {
-    width: 45px;
+    width: 42px;
     margin: 10px auto;
     height: 35px;
 
@@ -200,23 +300,38 @@ header {
 }
 
 #footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
 
     margin-top: auto;
     width: 100%;
     text-align: center;
     font-family: 'Roboto Mono';
-    font-size: 14px;
+    font-size: 1.4em;
 
     background-color: rgba(223, 223, 223, 0.096);
 }
 
-#footer a {
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    max-width: 80%;
+    margin: 0 auto;
+
+    list-style: none;
+}
+
+ul li:not(:first-child) {
+    margin-left: 40px;
+}
+
+#gabi-instagram {
     text-decoration: none;
     color: brown;
 }
 
-#footer a:active {
+#gabi-instagram:active {
     color: red;
 }

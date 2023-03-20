@@ -11,10 +11,29 @@ const count = document.querySelector('#count');
 
 let randomNumber;
 
-dice.addEventListener('click', function() {
+dice.addEventListener('click', startGame);
+
+function startGame() {
+    attemptInput.removeAttribute('disabled');
+    attemptInput.removeAttribute('title');
+    attemptInput.focus();
+
+    // For Restart
+    attemptInput.value = '';
+    i = 0;
+    count.innerHTML = `${i}`;
+
+    const spaceWrite = document.querySelector('.win-die');
+    const p = spaceWrite.querySelector('p');
+    const a = spaceWrite.querySelector('a');
+    if(p && a) {
+        spaceWrite.removeChild(p);
+        spaceWrite.removeChild(a);
+    }
+
     // Genera numero aleatorio
     randomNumber = parseInt(Math.random() * 101);
-    // console.log(randomNumber);
+
     alert('Game started.');
 
     // remove disable de btn accept.
@@ -22,10 +41,11 @@ dice.addEventListener('click', function() {
 
     // desactiva el botón
     dice.setAttribute('disabled', true);
-});
+}
 
 send.addEventListener('click', function() {
-    if(attemptInput.value === '') {
+    attemptInput.focus();
+    if(attemptInput.value === '' || attemptInput.value > 100) {
         return
     } else {
         sendedNumber(attemptInput.value, randomNumber);
@@ -33,10 +53,18 @@ send.addEventListener('click', function() {
 
 });
 
+// agrega num con ENTER;
+attemptInput.addEventListener('keypress', function(ev) {
+    if(ev.key === 'Enter') {
+        if(!attemptInput.value || attemptInput.value > 100) return;
+
+        sendedNumber(attemptInput.value, randomNumber);
+    }
+});
+
 let i = 0;
 
 function sendedNumber(playerNum, randomNumber) {
-
     i++;
 
     if(Number(playerNum) === randomNumber) {
@@ -57,16 +85,34 @@ function writeMsg(msg, win) {
     const spaceWrite = document.querySelector('.win-die');
     const p = document.createElement('p');
 
-    const btnReset = document.createElement('button');
-    btnReset.id = 'start';
-    btnReset.innerText = 'Reset';
-
-    p.innerText = msg;
-
+    const a = document.createElement('a');
+    a.innerText = 'Main Menu';
+    a.setAttribute('href', "./index.html");
+    a.setAttribute('id', 'back-index');
+    
     if(win) {
+        p.innerText = msg;
+
         spaceWrite.appendChild(p);
-        // spaceWrite.appendChild(btnReset);
-    } /* else {
+        spaceWrite.appendChild(a);
+
+        stopGame();
+    } else {
+        p.innerText = msg;
+
         spaceWrite.appendChild(p);
-    } */
+        spaceWrite.appendChild(a);
+
+        stopGame();
+    }
+}
+
+function stopGame() {
+    attemptInput.setAttribute('disabled', true);
+    attemptInput.setAttribute('title', "You must generate a random number first.");
+
+    // send btn
+    send.setAttribute('disabled', true);
+    // random num active
+    dice.removeAttribute('disabled');
 }
