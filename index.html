@@ -15,16 +15,53 @@
             <h1>Welcome to my Game.</h1>
         </header>
 
-        <section class="game">
-            <img src="./assets/dice.png" alt="dice image">
-            <h3>Play or Die</h3>
-            <label for="name-user">Your nickname:</label>
-            <input type="text" id="name-user" minlength="3" maxlength="8">
-            <button id="submit" disabled>▶ Play</button>
+        <div class="gamemode">
+            <section class="game">
+                <img src="./assets/dice.png" alt="dice image">
+                <h3>Play or Die</h3>
+
+                <form class="formulario" name="form">
+                    <label for="name-user">Your nickname:</label>
+                    <input type="text" id="name-user" minlength="3" maxlength="8" autocomplete="off">
+    
+                    <label for="gamemode">Choose a game mode:</label>
+                    <select name="gamemode" id="gamemode" class="mode" required>
+                        <option value="">Choose one Option</option>
+                        <option value="1">No limits</option>
+                        <option value="2">Limit of Attempts</option>
+                    </select>
+    
+                    <button id="submit" disabled>▶ Play</button>
+
+                    <div class="limits">
+                        <label for="limit" >How many tries will you need?</label>
+                        <input type="number" name="limit" id="limit" >
+                    </div>
+                </form>
+
+
+            </section>
+            
+        </div>
+        
+        <section class="credits">
+                <p>Desenvolved by <a href="https://instagram.com/ggabi40" target="_blank" id="gabi-instagram">GGabi40</a> | 2023.</p>
+            <br>
+            <p>Collaborators:
+                <ul id="collaborators">
+                    <li><a href="https://instagram.com/luizgui.dev" target="_blank" id="gabi-instagram">Luiz Guilherme</a></li>
+                </ul>
+            </p>
         </section>
 
         <footer id="footer">
-            <p>Desenvolved by <a href="https://instagram.com/ggabi40" target="_blank">GGabi40</a> | 2023.</p>
+            <p>Desenvolved by <a href="https://instagram.com/ggabi40" target="_blank" id="gabi-instagram">GGabi40</a> | 2023.</p>
+            <br>
+            <p>Collaborators:
+                <ul id="collaborators">
+                    <li><a href="https://instagram.com/luizgui.dev" target="_blank" id="gabi-instagram">Luiz Guilherme</a></li>
+                </ul>
+            </p>
         </footer>
     </main>
     <script src="./main.js"></script>

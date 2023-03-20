@@ -4,7 +4,7 @@
 
 <br>
 <h2>Mentalist</h2>
-<img src="./assets/preview.png" alt="Preview" style="border: 3px solid brown;">
+<img src="./assets/preview-img.png" alt="Preview">
 
 <br>
 <hr>
